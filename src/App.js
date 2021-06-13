@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Container, Grid, Divider } from "@material-ui/core";
+import { useState } from "react";
+import Header from "./components/Header"
+import WalletValueDisplay from "./components/WalletValueDisplay";
+import CapitalAndGains from "./components/CapitalAndGains";
+import AssetBreakdown from "./components/AssetBreakdown";
 
 function App() {
+  const [walletValue, setWalletValue] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Box display="flex" flexDirection="column" alignItems="center" alignContent="center">
+        <br></br>
+        <br></br>
+        <Box display="flex" flexDirection="column" >
+          <Header titleText="Luno Asset Tracker"></Header>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <WalletValueDisplay walletValue={walletValue}></WalletValueDisplay>
+          <br></br>
+          <br></br>
+          <CapitalAndGains></CapitalAndGains>
+          <br></br>
+          <br></br>
+          <AssetBreakdown></AssetBreakdown>
+        </Box>
+      </Box>
+      
+      
     </div>
   );
 }
