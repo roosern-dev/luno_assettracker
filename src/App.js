@@ -7,6 +7,7 @@ import AssetBreakdown from "./components/AssetBreakdown";
 
 function App() {
   const [walletValue, setWalletValue] = useState(0);
+  const assets = [{assetName:"Bitcoin"}, {assetName:"Ethereum"}]
 
   return (
     <div className="App">
@@ -25,7 +26,7 @@ function App() {
           <CapitalAndGains></CapitalAndGains>
           <br></br>
           <br></br>
-          <AssetBreakdown></AssetBreakdown>
+          <AssetBreakdown assets={assets}></AssetBreakdown>
         </Box>
       </Box>
       

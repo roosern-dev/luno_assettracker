@@ -3,8 +3,8 @@ import { Box, Typography, Divider } from "@material-ui/core"
 const CapitalAndGains = (props) => {
     return (  
         <>
-        <Box display="flex">
-            <Box display="flex" flexDirection="column" m={5}>
+        <Box display="flex" alignItems ="center">
+            <Box display="flex" flexDirection="column" mr={5}>
                 <Typography variant="h6">Capital</Typography>
                 <Typography>0</Typography>
             </Box>
